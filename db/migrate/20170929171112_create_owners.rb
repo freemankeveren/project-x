@@ -4,7 +4,6 @@ class CreateOwners < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :phone
       t.string :picture
-      t.integer :id
 
       t.timestamps
     end
