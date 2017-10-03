@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Header, Segment, Form, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { handleLogin } from '../actions/auth';
+import { Menu } from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
 
 class Login extends Component {
   state = { email: '', password: '' };
@@ -47,6 +49,9 @@ class Login extends Component {
           </Form.Field>
           <Segment textAlign='center' basic>
             <Button primary type='submit'>Submit</Button>
+            <Link to='/register'>
+              <Menu.Item name='Register' />
+            </Link>
           </Segment>
         </Form>
       </Segment>

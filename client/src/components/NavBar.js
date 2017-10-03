@@ -4,6 +4,19 @@ import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
 
+const styles = {
+  main: {
+    margin: 0,
+    top: 0,
+    right: 60,
+    bottom:20,
+    right: 'auto',
+    position: 'fixed',
+    padding: '50px',
+    background: 'grey'
+  },
+}
+
 class NavBar extends Component {
   rightNavs = () => {
     const { user, dispatch, history } = this.props;
@@ -20,9 +33,7 @@ class NavBar extends Component {
     }
     return (
       <Menu.Menu position='right'>
-        <Link to='/register'>
-          <Menu.Item name='Register' />
-        </Link>
+
         <Link to='/login'>
           <Menu.Item name='Login' />
         </Link>
@@ -32,14 +43,14 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
-        <Menu pointing secondary>
+      <nav style={styles.main}>
+        <Menu secondary>
           <Link to='/'>
-            <Menu.Item name='home' />
+            <Menu.Item name='Project X' />
           </Link>
           { this.rightNavs() }
         </Menu>
-      </div>
+      </nav>
     );
   }
 }
