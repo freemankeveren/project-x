@@ -4,6 +4,18 @@ import { connect } from 'react-redux';
 import { registerUser } from '../actions/auth';
 import { setFlash } from '../actions/flash';
 
+const styles = {
+  main: {
+    border: 150,
+    margin: 12,
+    top: 10,
+    right: '300px',
+    bottom:20,
+    left: '250px',
+    position: 'relative',
+  },
+}
+
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '' };
 
@@ -28,7 +40,7 @@ class Register extends Component {
     const { email, password, passwordConfirmation } = this.state;
 
     return (
-      <Segment basic>
+      <Segment basic style={styles.main}>
         <Header as='h1' textAlign='center'>Register Component</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>

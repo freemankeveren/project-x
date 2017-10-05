@@ -5,6 +5,18 @@ import { handleLogin } from '../actions/auth';
 import { Menu } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 
+const styles = {
+  main: {
+    border: 150,
+    margin: 12,
+    top: 10,
+    right: '300px',
+    bottom:20,
+    left: '250px',
+    position: 'relative',
+  },
+}
+
 class Login extends Component {
   state = { email: '', password: '' };
 
@@ -23,7 +35,7 @@ class Login extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <Segment basic>
+      <Segment basic style={styles.main}>
         <Header as='h1' textAlign='center'>Login</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
