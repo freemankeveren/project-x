@@ -12,7 +12,7 @@ const styles = {
     top: 10,
     right: '300px',
     bottom:20,
-    left: '250px',
+    left: '285px',
     position: 'relative',
   },
 }
@@ -38,7 +38,7 @@ class Login extends Component {
       <Segment basic style={styles.main}>
         <Header as='h1' textAlign='center'>Login</Header>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Field>
+          <Form.Field required>
             <label htmlFor='email'>Email</label>
             <input
               required
@@ -48,7 +48,7 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </Form.Field>
-          <Form.Field>
+          <Form.Field required>
             <label htmlFor='password'>Password</label>
             <input
               required

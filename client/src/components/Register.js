@@ -11,7 +11,7 @@ const styles = {
     top: 10,
     right: '300px',
     bottom:20,
-    left: '250px',
+    left: '285px',
     position: 'relative',
   },
 }

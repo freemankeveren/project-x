@@ -9,11 +9,11 @@ const styles = {
     margin: 0,
     top: 0,
     right: 60,
-    bottom:20,
+    bottom: 0,
     right: 'auto',
     position: 'fixed',
-    padding: '50px',
-    background: 'grey'
+    padding: '150px',
+    background: '#fa8072'
   },
 }
 
@@ -24,6 +24,10 @@ class NavBar extends Component {
     if (user.id) {
       return (
         <Menu.Menu position='right'>
+          <Link to='/home'>
+            <Menu.Item name='Project X' />
+          </Link>
+          { this.rightNavs() }
           <Menu.Item
             name='Logout'
             onClick={() => dispatch(handleLogout(history))}
@@ -33,7 +37,10 @@ class NavBar extends Component {
     }
     return (
       <Menu.Menu position='right'>
-
+        <Link to='/'>
+          <Menu.Item as='h1' name='Project X' />
+        </Link>
+        { this.rightNavs() }
         <Link to='/login'>
           <Menu.Item name='Login' />
         </Link>
@@ -44,12 +51,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav style={styles.main}>
-        <Menu secondary>
-          <Link to='/'>
-            <Menu.Item name='Project X' />
-          </Link>
-          { this.rightNavs() }
-        </Menu>
+
       </nav>
     );
   }

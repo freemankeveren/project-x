@@ -7,7 +7,7 @@ const styles = {
     margin: 12,
     top: 10,
     right: '300px',
-    bottom:20,
+    bottom: 0,
     left: '250px',
     position: 'relative',
     background: 'grey',
@@ -15,14 +15,14 @@ const styles = {
 }
 
 
-class Home extends Component {
+class HomeIndex extends Component {
   render() {
     return (
       <div style={styles.main}>
-        <Header as='h1' textAlign='center' style={styles.main}>Project X</Header>
+        <Header as='h1' textAlign='center'>Project X</Header>
       </div>
       );
   }
 }
 
-export default Home;
+export default HomeIndex;
